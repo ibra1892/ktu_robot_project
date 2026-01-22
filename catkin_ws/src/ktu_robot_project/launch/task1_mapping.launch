@@ -1,0 +1,9 @@
+<launch>
+    <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_house.launch"/>
+
+    <include file="$(find turtlebot3_slam)/launch/turtlebot3_slam.launch">
+        <arg name="slam_methods" value="gmapping"/>
+    </include>
+
+    <node pkg="ktu_robot_project" type="wall_follower_script.py" name="mapping_logic" output="screen"/>
+</launch>

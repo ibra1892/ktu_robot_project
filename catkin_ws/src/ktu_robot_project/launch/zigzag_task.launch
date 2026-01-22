@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_house.launch" />
+
+  <node pkg="ktu_robot_project" type="zigzag_mapper.py" name="zigzag_node" output="screen" />
+</launch>
